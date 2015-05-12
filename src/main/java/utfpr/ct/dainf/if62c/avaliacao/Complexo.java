@@ -15,21 +15,32 @@ public class Complexo {
     public Complexo() {
     }
 
-    public Complexo(double real, double img) {
-        // completar a implementação
+    public Complexo(double realx, double imgx) {
+        img = imgx;
+        real = realx;
     }
 
-    // implementar getReal()
+    public double getReal(){
+        return real;
+    }
 
-    // implementar getImg()
+    public double getImg(){
+        return img;
+    }
 
     public Complexo soma(Complexo c) {
         return new Complexo(real + c.real, img + c.img);
     }
     
-    // implementar sub(Complexo)
+    public Complexo sub(Complexo c){
+        return new Complexo(real - c.real, img - c.img); 
+        
+    }
 
-    // implementar prod(double)
+    public Complexo prod(Complexo c){
+        return new Complexo(real* c.real - img*c.img, real* c.real+ img* c.img);
+    
+    }
 
     // implementar prod(Complexo)
     
